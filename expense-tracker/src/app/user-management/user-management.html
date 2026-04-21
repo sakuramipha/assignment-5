@@ -1,1 +1,29 @@
-<p>user-management works!</p>
+<div>
+  <div>
+    <h1>User Management</h1>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      placeholder="Enter the user name"
+    />
+  </div>
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="email"
+      placeholder="Email"
+    />
+  </div>
+  @if(selectedUser()){
+    <div>
+      <button (click) = "updateUser()">Update User</button>
+    </div>
+  }
+  @else{
+  <div>
+    <button (click)="addUser()">
+      Add User
+    </button>
+  </div>
+  }
+  <hr />
